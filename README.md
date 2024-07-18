@@ -32,10 +32,15 @@
 Run `StringExtractor.exe` and drag an .exe file onto it. The program will generate an output file with the extracted information. For example:
 
 File Name: MyApp.exe
+
 File Size: 123456 bytes
+
 MD5: abcdef1234567890abcdef1234567890
+
 PcaSvc: 0x123456
+
 DPS: !2024/07/18:15:30:00
+
 
 
 ## Notes
