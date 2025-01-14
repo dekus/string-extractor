@@ -1,0 +1,14 @@
+﻿  strings-extractor.cpp
+C:\vcpkg\installed\x64-windows\include\LIEF\PE\ResourcesManager.hpp(72,15): warning C4267: 'return': conversion from 'size_t' to 'uint32_t', possible loss of data
+  (compiling source file 'strings-extractor.cpp')
+  
+C:\vcpkg\installed\x64-windows\include\LIEF\PE\LoadConfigurations\LoadConfiguration.hpp(178,12): warning C4244: 'return': conversion from 'const uint64_t' to 'uint32_t', possible loss of data
+  (compiling source file 'strings-extractor.cpp')
+  
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 270 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  strings-extractor.vcxproj -> C:\Users\User\source\repos\strings-extractor\x64\Release\strings-extractor.exe
+  'pwsh.exe' is not recognized as an internal or external command,
+  operable program or batch file.
