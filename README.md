@@ -1,6 +1,6 @@
-# StringExtractor
+# StringExtractor (C++ Version)
 
-**StringExtractor** is a .NET-based tool for extracting information from executable (.exe) files. This program allows you to analyze Portable Executable (PE) files and extract useful details such as the file name, file size, MD5 hash, and certain PE file details like image size and timestamp.
+**StringExtractor** is a C++ tool for extracting information from executable (.exe) files. This program allows you to analyze Portable Executable (PE) files and extract useful details such as the file name, file size, MD5 hash, and certain PE file details like image size and timestamp.
 
 ## Features
 
@@ -13,42 +13,26 @@
 
 ## How It Works
 
-1. **Drag and Drop**: Drag and drop an .exe file onto the `StringExtractor` executable.
-2. **Information Extraction**: The program reads the PE file, calculates the MD5 hash, and gathers the requested information.
-3. **Output**: Extracted information is saved to a text file with the suffix `result.txt`.
+1. **Command Line Usage**: Pass the path to an .exe file as a command-line argument to the `StringExtractor` executable.
+2. **Information Extraction**: The program reads the PE file, calculates the MD5 hash, and gathers the requested information using the LIEF library for PE file analysis.
+3. **Output**: Extracted information in command prompt.
 
 ## Requirements
 
-- .NET Framework 4.7.2
-- [PeNet](https://github.com/pdn/PeNet) for PE file analysis
+- C++17 or later
+- [LIEF](https://github.com/lief-project/LIEF) for PE file analysis
+- [OpenSSL](https://www.openssl.org/) for MD5 hash calculation
+- [spdlog](https://github.com/gabime/spdlog) for logging (optional)
+- [fmt](https://github.com/fmtlib/fmt) for string formatting
 
 ## Usage
 
-1. **Build**: Compile the project using an environment compatible with .NET Framework 4.7.2.
-2. **Run**: Drag an .exe file onto `StringExtractor.exe` to extract information.
+1. **Build**: Compile the project using a C++ compiler (e.g., MSVC, GCC, or Clang) with the necessary libraries linked.
+2. **Run**: Execute the program from the command line, passing the path to an .exe file as an argument.
 
-## Example Usage
+### Example Usage
 
-Run `StringExtractor.exe` and drag an .exe file onto it. The program will generate an output file with the extracted information. For example:
+Run the following command in the terminal:
 
-File Name: MyApp.exe
-
-File Size: 123456 bytes
-
-MD5: abcdef1234567890abcdef1234567890
-
-PcaSvc: 0x123456
-
-DPS: !2024/07/18:15:30:00
-
-
-
-## Notes
-
-- Ensure that `PeNet.dll` is present in the same directory as `StringExtractor.exe` or in the specified project path.
-- If you encounter errors related to `PeNet.dll`, check that all dependencies are properly installed and accessible.
-
-## Contributing
-
-If you wish to contribute to this project, please fork the repository and submit a pull request with your changes. Make sure to follow the contribution guidelines.
-
+```bash
+StringExtractor.exe MyApp.exe
